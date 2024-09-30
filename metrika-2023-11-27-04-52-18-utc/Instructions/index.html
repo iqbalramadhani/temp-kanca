@@ -1,0 +1,1004 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Metrika - Angular js material admin theme</title>
+	
+	<meta name="description" content="Metrika is a full fledged Material design angular admin template. Built using Google's framework for AngularJS. For a live online documentation go to https://themonkeythemes.ticksy.com/articles/100003185/">
+	<meta name="author" content="Joao Garin">
+	<meta name="copyright" content="Joao Garin">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2016-05-23T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-metrika">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#online_documentation" title="Online Documentation">Online Documentation</a></li>
+			<li><a href="#installation" title="Installation">Installation</a>
+				<ul>
+					<li><a href="#installation__nbsp">&nbsp;</a>
+					<li><a href="#installation_installing">Installing</a>
+					<li><a href="#installation_compiling_the_theme">Compiling the theme</a>
+					<li><a href="#installation_packagejson_development_dependencies">package.json - Development dependencies</a>
+					<li><a href="#installation_bowerjson_external_dependencies">Bower.json - External dependencies</a>
+				</ul>
+			</li>
+			<li><a href="#application_structure" title="Application Structure">Application Structure</a></li>
+			<li><a href="#material_angular_js_directives" title="Material Angular JS Directives">Material Angular JS Directives</a>
+				<ul>
+					<li><a href="#material_angular_js_directives_md_autocomplete">md-autocomplete</a>
+					<li><a href="#material_angular_js_directives_md_button">md-button</a>
+					<li><a href="#material_angular_js_directives_md_card">md-card</a>
+					<li><a href="#material_angular_js_directives_md_checkbox">md-checkbox</a>
+					<li><a href="#material_angular_js_directives_md_content">md-content</a>
+					<li><a href="#material_angular_js_directives_md_icon">md-icon</a>
+					<li><a href="#material_angular_js_directives_md_input">md-input</a>
+					<li><a href="#material_angular_js_directives_md_progress_circular">md-progress-circular</a>
+					<li><a href="#material_angular_js_directives_md_progress_linear">md-progress-linear</a>
+					<li><a href="#material_angular_js_directives_md_radio_button">md-radio-button</a>
+					<li><a href="#material_angular_js_directives_md_select">md-select</a>
+					<li><a href="#material_angular_js_directives_md_sidenav">md-sidenav</a>
+					<li><a href="#material_angular_js_directives_md_slider">md-slider</a>
+					<li><a href="#material_angular_js_directives_md_switch">md-switch</a>
+					<li><a href="#material_angular_js_directives_md_tab">md-tab</a>
+					<li><a href="#material_angular_js_directives_md_toolbar">md-toolbar</a>
+					<li><a href="#material_angular_js_directives_md_tooltip">md-tooltip</a>
+				</ul>
+			</li>
+			<li><a href="#charts" title="Charts">Charts</a>
+				<ul>
+					<li><a href="#charts_d3_charts">D3 Charts</a>
+					<li><a href="#charts__nbsp">&nbsp;</a>
+					<li><a href="#charts_morris_charts">Morris charts</a>
+					<li><a href="#charts_chart_js">Chart js</a>
+					<li><a href="#charts_flot_charts">Flot charts</a>
+					<li><a href="#charts_easypiecharts">Easypiecharts</a>
+					<li><a href="#charts_gauge_charts">Gauge charts</a>
+					<li><a href="#charts_sparkline">Sparkline</a>
+				</ul>
+			</li>
+			<li><a href="#css_files" title="CSS Files">CSS Files</a></li>
+			<li><a href="#theming_colors_nav" title="Theming - colors & nav">Theming - colors & nav</a>
+				<ul>
+					<li><a href="#theming_colors_nav_configuring_a_theme_">Configuring a theme :</a>
+				</ul>
+			</li>
+			<li><a href="#icons" title="Icons">Icons</a>
+				<ul>
+					<li><a href="#icons_material_design_icon_set">Material design icon set</a>
+					<li><a href="#icons_glyphicons">Glyphicons</a>
+					<li><a href="#icons_weather_icons">Weather icons</a>
+					<li><a href="#icons_em_style"box_sizing_border_box_margin_0px_padding_0px_border_0px_outline_0px_font_size_15px_vertical_align_baseline_color_rgb_85,_85,_85_font_family_proxima_nova,_sans_serif_line_height_24px_background_transparent"font_awesome_em">Font awesome</a>
+				</ul>
+			</li>
+			<li><a href="#additional_angular_scripts" title="Additional Angular scripts">Additional Angular scripts</a>
+				<ul>
+					<li><a href="#additional_angular_scripts__nbsp">&nbsp;</a>
+					<li><a href="#additional_angular_scripts_app_todo">App todo</a>
+				</ul>
+			</li>
+			<li><a href="#credits" title="Credits">Credits</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Joao Garin 2016<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Metrika</h1>
+	<h2>Angular js material admin theme</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 11/12/2014</li>
+	<li>latest update: 05/23/2016</li>
+	<li>by: Joao Garin</li>
+	
+	<li>email: <a href="mailto:&#106;&#111;&#97;&#111;&#46;&#103;&#97;&#114;&#105;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#111;&#97;&#111;&#46;&#103;&#97;&#114;&#105;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p>Thank you for buying the theme</p>
+	</section>
+	
+	<section id="online_documentation">
+	<div class="page-header"><h3>Online Documentation</h3><hr class="notop"></div>
+<p>
+	For an online version of the documentation go to&nbsp;<a href="https://themonkeythemes.ticksy.com/articles/100003185/">https://themonkeythemes.ticksy.com/articles/100003185/</a></p>
+</section>
+<section id="installation">
+	<div class="page-header"><h3>Installation</h3><hr class="notop"></div>
+<h4 id="installation__nbsp">&nbsp;</h4>
+<div>
+	<h4 id="installation_installing">Installing</h4>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		To deploy the theme simply put the files into your webserver (ex : www.example.com) and navigate to it through the browser</p>
+	<h5 style="box-sizing: border-box; margin: 0px 0px 8px; padding: 0px; border: 0px; outline: 0px; font-size: 16px; vertical-align: baseline; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; line-height: 24px; background: transparent;">
+		Chaanging and deploying</h5>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		The theme comes with grunt.js integration and bower so in order to have an optimised installation the recommended way is buy performing the grunt and bower tasks described bellow.</p>
+	<h5 style="box-sizing: border-box; margin: 0px 0px 8px; padding: 0px; border: 0px; outline: 0px; font-size: 16px; vertical-align: baseline; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; line-height: 24px; background: transparent;">
+		Development</h5>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		For development purposed javascript files and css files will not be compressed in order to be able to debug and find easily where any issue is.</p>
+	<h5 style="box-sizing: border-box; margin: 0px 0px 8px; padding: 0px; border: 0px; outline: 0px; font-size: 16px; vertical-align: baseline; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; line-height: 24px; background: transparent;">
+		Testing</h5>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		The theme contains a test grunt task using jshint to go trough the code and find possible issues with the code.</p>
+	<h5 style="box-sizing: border-box; margin: 0px 0px 8px; padding: 0px; border: 0px; outline: 0px; font-size: 16px; vertical-align: baseline; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; line-height: 24px; background: transparent;">
+		Production / Minified&nbsp;</h5>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		Minified task compresses css files, js files, compiles html templates in to javascript all in order to fully optimize the final application and make it as fast and reliable as possible.</p>
+	<h4 id="installation_compiling_the_theme">Compiling the theme</h4>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		To perform the grunt tasks you will need the following things installed in either your local maching (recommended) or on the webserver, depending where you are performing the tasks. For more information on grunt follow this link :&nbsp;<a href="http://gruntjs.com/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://gruntjs.com/</a></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		1 ) Install node.js on your maching. It provides also installations for all other platforms :&nbsp;<a href="http://nodejs.org/download/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://nodejs.org/download/</a></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		On Ubuntu running the sudo apt-get install nodejs might run into problems as the version available in the package manager is not supported. For more info check :&nbsp;<a href="http://stackoverflow.com/questions/12913141/installing-from-npm-fails" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://stackoverflow.com/questions/12913141/installing-from-npm-fails</a></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		2 )&nbsp;Before setting up Grunt ensure that your&nbsp;<a href="https://www.npmjs.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">npm</a>&nbsp;is installed and up-to-date by running npm update -g npm (this might require sudo on certain systems). To install on linux you can run :<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">&nbsp;sudo apt-get install npm</strong></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		2 ) Install grunt Command line interface (CLI) by following :&nbsp;<a href="http://gruntjs.com/getting-started" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://gruntjs.com/getting-started</a></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		3 ) make sure all packages are installed by running in your application root folder the following :&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">sudo&nbsp;npm install</strong></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		4 ) Enable all dependencies by running : bower install</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		5 ) Run the task you want :</p>
+	<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			grunt dev (grunt --force dev for forcing erros to pass)</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			grunt test&nbsp;(grunt --force test for forcing erros to pass)</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			grunt minified&nbsp;(grunt --force minified for forcing erros to pass)</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			grunt copy-icons (grunt --force minified for forcing erros to pass).&nbsp;</li>
+	</ul>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		This will compile &nbsp;the scripts in the application (app, controllers, directives, services, all extra scripts like all the charting libraries etc) and put them into one single js file and one single css file inside the destination folder in this case &quot;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">dist</strong>&quot;.</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		After that simply push your root files and the dist folder into the webserver and you are done! You have a full compressed and optimized site running.</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		Files contained in the compressed application :&nbsp;</p>
+	<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			index.html</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			app</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			dist</li>
+	</ul>
+	<h5 style="box-sizing: border-box; margin: 0px 0px 8px; padding: 0px; border: 0px; outline: 0px; font-size: 16px; vertical-align: baseline; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; line-height: 24px; background: transparent;">
+		Problem while copying files</h5>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		When copying the icons you might run into an issue where grunt is trying to open too many files (its a lot of images). You can run the command to Increase file limit size :&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">ulimit -n 10240.</strong>&nbsp;Alternatively you can also copy the icons folder manually from the folder bower_components/material-design-icons. Make sure to copy all svg files into the same folder&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">dist/img/icons</strong></p>
+	<h4 id="installation_packagejson_development_dependencies">package.json - Development dependencies</h4>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		In the file package.json are included the development dependencies, namely all the grunt modules to be able to run grunt to compile the theme. To instal the dependencies run&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">npm install</strong>&nbsp;and this will install all the dependencies.&nbsp;</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		To install a new dependency and save the dependency run the following command :</p>
+	<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			npm install&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">npm_module</strong>&nbsp;--save-dev</li>
+	</ul>
+	<h4 id="installation_bowerjson_external_dependencies">Bower.json - External dependencies</h4>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		All dependenies are listed in the bower.json file. When running bower install all dependencies like jquery, angular, chartjs etc will be installed in the folder bower_components.</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Notes :&nbsp;</strong></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		When asked to choose jquery version choose version 2.1.4.</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		To include new dependencies run the following command to both install and save the dependency :&nbsp;</p>
+	<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			bower install&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">package_name&nbsp;</strong>--save</li>
+	</ul>
+</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="application_structure">
+	<div class="page-header"><h3>Application Structure</h3><hr class="notop"></div>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The application is organized in a way that is easy to fnd and change any script, separating the logic on controllers, directives, services and external libraries as well as scss files.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The HTML templates are also separate using angular-route to map between templates for a more performant and clean structure. Next are described all parts of the application and what to find in each of these parts :&nbsp;</p>
+<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+	index.html</h3>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Contians all &nbsp;the main includes, the overall sctructure of the page. Here is where lies the main imports for javscript and css, font, and HTML dom representation. Templates of specific pages are not present here but imported using&nbsp;<a href="https://docs.angularjs.org/api/ng/directive/ngInclude" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">ng-include</a></em></p>
+<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Styles&nbsp;</em></h3>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">In this folder are included the stylesheets for the application. whenever you want to make changes to the style of the application you can make them here. These files are included to be compressed in the Gruntfile.js where they will be minified and compressed and imported into the &quot;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">dist</strong>&quot; folder.</em></p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Stylesheets are organized following the&nbsp;<a href="https://smacss.com/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">SMACSS</a>&nbsp;structure to make it easier to find and manage a large CSS structure. CSS files are organizes in the following folders :</em></p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Partials</strong>&nbsp;- The partials are mixins that are used across the application like @include box-shadow</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Base</strong>&nbsp;- The base CSS files styling general elements like forms, buttons, cards, labels, lists etc</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Settings</strong>&nbsp;- Cotains the settings for the application. Working like a configuration for the application CSS. Contains the colors of the theme in the file colors.scss</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Components</strong>&nbsp;- Application specific components like Charts, maps, team members styling etc</em></li>
+</ul>
+<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Scripts</em></h3>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">In this folder are included all external libraries to be used by the theme.This folder&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">does not contain app specific files but only external libraries.&nbsp;</strong>These files are included because they are either not available via bower or are being used in a very specific version.</em></p>
+<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Images</em></h3>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">This is the folder where all images are stored. They are copied to the final dist folder by grunt tasks</em></p>
+<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Fonts</em></h3>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">The fonts directory contains fonts for the application. The fonts included in this folder are the weather icons.</em></p>
+<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Mp3</em></h3>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">The mp3 directory contains music files for the app. They will also be ported into th dist folder on grunt task running.</em></p>
+<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">App</em></h3>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">The app directory is where the Angular app resides. here are all the templates, directives, controllers, components,&nbsp;main app file and services. The app directory contains three main directories.</em></p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Views - This is where all templates for pages reside</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Components - Specific components like the chat are contained here. Each on in a file containing the necessary js module controller and directives and also if applicable the html.</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Common - Header and navigation live here. Also inside is all the necessary javascript for these areas.</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">app.js - The inicitalization of the app. Containing the .config function all including all necessary angular modules for the app.</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">config.js - Contains app settings, namely the colors for the angular theme setup. See theming - colors chapter for more info on how to setup this.</em></li>
+</ul>
+</section>
+<section id="material_angular_js_directives">
+	<div class="page-header"><h3>Material Angular JS Directives</h3><hr class="notop"></div>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Material Design for angular JS comes with a lot of very usefull directives. For a more detailed information check out the project page in&nbsp;<a href="https://material.angularjs.org/#/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://material.angularjs.org/#/</a></p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Here I will give a little detail about the ones used in the template and how they are combined with the template files.</p>
+<h4 id="material_angular_js_directives_md_autocomplete">md-autocomplete</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-autocomplete&gt;&lt;/md-autocomplete&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	This is a special input component with a drop-down of all possible matches to a custom query. This component allows you to provide real-time suggestions as the user types in the input area.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-autocomplete md-selected-item=&quot;selectedItem&quot; md-search-text=&quot;searchText&quot; md-items=&quot;item in getMatches(searchText)&quot; md-item-text=&quot;item.display&quot;&gt;
+  &lt;span md-highlight-text=&quot;searchText&quot;&gt;{{item.display}}&lt;/span&gt;
+&lt;/md-autocomplete&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	An example of this element is presente in the&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Forms</strong>&nbsp;menu and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/forms/elements.html</strong></p>
+<h4 id="material_angular_js_directives_md_button">md-button</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-button&gt;&lt;/md-button&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	is a button directive with optional ink ripples (default enabled). If you supply a&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">href</strong>&nbsp;or&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">ng-href</strong>&nbsp;attribute, it will become an&nbsp;<a style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">element. Otherwise, it will become a&nbsp;</a><button style="font-family: proxima-nova, sans-serif; font-size: 15px; color: rgb(85, 85, 85); -webkit-appearance: none;"></button><a style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;"><button style="font-family: proxima-nova, sans-serif; font-size: 15px; color: rgb(85, 85, 85); -webkit-appearance: none;">element.</button></a></p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-button&gt;
+  Button
+&lt;/md-button&gt;
+&lt;md-button href=&quot;http://google.com&quot; class=&quot;md-button-colored&quot;&gt;
+  I&#39;m a link
+&lt;/md-button&gt;
+&lt;md-button ng-disabled=&quot;true&quot; class=&quot;md-colored&quot;&gt;
+  I&#39;m a disabled button
+&lt;/md-button&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Several example of buttons are present in the&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui elements -&gt; buttons</strong>&nbsp;menu and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/ui_elements/buttons.html</strong></p>
+<h4 id="material_angular_js_directives_md_card">md-card</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-card&gt;&lt;/md-card&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The md-card directive is a container element used within md-content containers. Cards have constant width and variable heights; where the maximum height is limited to what can fit within a single view on a platform, but it can temporarily expand as needed</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-card&gt;
+ &lt;img src=&quot;dist/images/bg_weather1.png&quot; class=&quot;md-card-image&quot;&gt;
+ &lt;h2&gt;Paracosm&lt;/h2&gt;
+ &lt;p&gt;
+   The titles of Washed Out&#39;s breakthrough song and the first single from Paracosm share the * two most important words in Ernest Greene&#39;s musical language: feel it. It&#39;s a simple request, as well...
+ &lt;/p&gt;
+&lt;/md-card&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Several example of cards are present in the&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui elements -&gt; cards</strong>&nbsp;menu and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/ui_elements/cards.html</strong></p>
+<h4 id="material_angular_js_directives_md_checkbox">md-checkbox</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-checkbox&gt;&lt;/md-checkbox&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<a style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">The checkbox directive is used like the normal angular checkbox. As per the&nbsp;</a><a href="http://www.google.com/design/spec/style/color.html#color-ui-color-application" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">material design spec</a>&nbsp;the checkbox is in the accent color by default. The primary color palette may be used with the md-primary class.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-checkbox ng-model=&quot;isChecked&quot; aria-label=&quot;Finished?&quot;&gt;
+  Finished ?
+&lt;/md-checkbox&gt;
+&lt;md-checkbox md-no-ink ng-model=&quot;hasInk&quot; aria-label=&quot;No Ink Effects&quot;&gt;
+  No Ink Effects
+&lt;/md-checkbox&gt;
+&lt;md-checkbox ng-disabled=&quot;true&quot; ng-model=&quot;isDisabled&quot; aria-label=&quot;Disabled&quot;&gt;
+  Disabled
+&lt;/md-checkbox&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Several example of checkboxes are present in the&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Forms elements-&gt;&nbsp;</strong><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Forms elements</strong>&nbsp;menu and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/forms/elements.html</strong></p>
+<h4 id="material_angular_js_directives_md_content">md-content</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-content&gt;&lt;/md-content&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The&nbsp;directive is a container element useful for scrollable content</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Restrictions :&nbsp;</strong>Add the md-padding class to make the content padded.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-content class=&quot;md-padding&quot;&gt;
+    Lorem ipsum dolor sit amet, ne quod novum mei.
+&lt;/md-content&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Several example of md-content are present all across the site from the main page to each page on Ui elements and Forms. They serve as a wrapper for content.</p>
+<h4 id="material_angular_js_directives_md_icon">md-icon</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-icon&gt;&lt;/md-icon&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The md-icon directive is an markup element useful for showing an icon based on a font-face or a SVG. Both external SVGs (via URLs) or cached SVG from icon sets can be easily loaded and used.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-icon md-font-icon=&quot;android&quot; alt=&quot;android &quot;&gt;&lt;/md-icon&gt;
+&lt;md-icon md-svg-icon=&quot;action:android&quot; alt=&quot;android &quot;&gt;&lt;/md-icon&gt;
+&lt;md-icon md-svg-src=&quot;/android.svg&quot; alt=&quot;android &quot;&gt;&lt;/md-icon&gt;
+&lt;md-icon md-svg-src=&quot;{{ getAndroid() }}&quot; alt=&quot;android &quot;&gt;&lt;/md-icon&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-icon being used as well as docmentation from icon names in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui elements -&gt; Icons</strong></p>
+<h4 id="material_angular_js_directives_md_input">md-input</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-input&gt;&lt;/md-input&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Use the input or the textarea as a child of an md-input-container.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-input-container&gt;
+  &lt;label&gt;Color&lt;/label&gt;
+  &lt;input type=&quot;text&quot; ng-model=&quot;color&quot; required md-maxlength=&quot;10&quot;&gt;
+&lt;/md-input-container&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-input being used and also being used with error (using ngMessages module) in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Form elements -&gt; Form elements&nbsp;</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/forms/elements.html</strong></p>
+<h4 id="material_angular_js_directives_md_progress_circular">md-progress-circular</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-progress-circular&gt;&lt;/md-progress-circular&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The circular progress directive is used to make loading content in your app as delightful and painless as possible by minimizing the amount of visual change a user sees before they can view and interact with content.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	For operations where the percentage of the operation completed can be determined, use a determinate indicator. They give users a quick sense of how long an operation will take.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	For operations where the user is asked to wait a moment while something finishes up, and it&rsquo;s not necessary to expose what&#39;s happening behind the scenes and how long it will take, use an indeterminate indicator.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-progress-circular md-mode=&quot;determinate&quot; value=&quot;...&quot;&gt;&lt;/md-progress-circular&gt;
+&lt;md-progress-circular md-mode=&quot;determinate&quot; ng-value=&quot;...&quot;&gt;&lt;/md-progress-circular&gt;
+&lt;md-progress-circular md-mode=&quot;determinate&quot; value=&quot;...&quot; md-diameter=&quot;100&quot;&gt;&lt;/md-progress-circular&gt;
+&lt;md-progress-circular md-mode=&quot;indeterminate&quot;&gt;&lt;/md-progress-circular&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-progress-circular being used in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui Elements -&gt; Material Ui</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/ui_elements/progress.html</strong></p>
+<h4 id="material_angular_js_directives_md_progress_linear">md-progress-linear</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-progress-linear&gt;&lt;/md-progress-linear&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The linear progress directive is used to make loading content in your app as delightful and painless as possible by minimizing the amount of visual change a user sees before they can view and interact with content.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Each operation should only be represented by one activity indicator&mdash;for example, one refresh operation should not display both a refresh bar and an activity circle.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	For operations where the percentage of the operation completed can be determined, use a determinate indicator. They give users a quick sense of how long an operation will take.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	For operations where the user is asked to wait a moment while something finishes up, and it&rsquo;s not necessary to expose what&#39;s happening behind the scenes and how long it will take, use an indeterminate indicator.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-progress-linear md-mode=&quot;determinate&quot; value=&quot;...&quot;&gt;&lt;/md-progress-linear&gt;
+&lt;md-progress-linear md-mode=&quot;determinate&quot; ng-value=&quot;...&quot;&gt;&lt;/md-progress-linear&gt;
+&lt;md-progress-linear md-mode=&quot;indeterminate&quot;&gt;&lt;/md-progress-linear&gt;
+&lt;md-progress-linear md-mode=&quot;buffer&quot; value=&quot;...&quot; md-buffer-value=&quot;...&quot;&gt;&lt;/md-progress-linear&gt;
+&lt;md-progress-linear md-mode=&quot;query&quot;&gt;&lt;/md-progress-linear&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-progress-linear being used in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui Elements -&gt; Material Ui</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/</strong><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">ui_elements</strong><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">/progress.html</strong></p>
+<h4 id="material_angular_js_directives_md_radio_button">md-radio-button</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-radio-button&gt;&lt;/md-radio-button&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The md-radio-button directive is the child directive required to be used within&nbsp;elements. While similar to the input type=&quot;radio&quot; ng-model=&quot;&quot; value=&quot;&quot; directive, the md-radio-button directive provides ink effects, ARIA support, and supports use within named radio groups.</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-radio-button value=&quot;1&quot; aria-label=&quot;Label 1&quot;&gt;
+  Label 1
+&lt;/md-radio-button&gt;
+&lt;md-radio-button ng-model=&quot;color&quot; ng-value=&quot;specialValue&quot; aria-label=&quot;Green&quot;&gt;
+  Green
+&lt;/md-radio-button&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-radio-button being used in the menu item &nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Form elements -&gt; Form elements&nbsp;</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/forms/elements.html</strong></p>
+<h4 id="material_angular_js_directives_md_select">md-select</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-select&gt;&lt;/md-select&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Displays a select box, bound to an ng-model.</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-select ng-model=&quot;someModel&quot; placeholder=&quot;Select a state&quot;&gt;
+  &lt;md-option ng-value=&quot;opt&quot; ng-repeat=&quot;opt in neighborhoods2&quot;&gt;{{ opt }}&lt;/md-option&gt;
+&lt;/md-select&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-select being used in the menu item &nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Form elements -&gt; Form elements&nbsp;</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/forms/elements.html</strong></p>
+<h4 id="material_angular_js_directives_md_sidenav">md-sidenav</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-sidenav&gt;&lt;/md-sidenav&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	A Sidenav component that can be opened and closed programatically. By default, upon opening it will slide out on top of the main content area.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;div layout=&quot;row&quot; ng-controller=&quot;MyController&quot;&gt;
+  &lt;md-sidenav md-component-id=&quot;left&quot; class=&quot;md-sidenav-left&quot;&gt;
+    Left Nav!
+  &lt;/md-sidenav&gt;
+  &lt;md-content&gt;
+    Center Content
+    &lt;md-button ng-click=&quot;openLeftMenu()&quot;&gt;
+      Open Left Menu
+    &lt;/md-button&gt;
+  &lt;/md-content&gt;
+  &lt;md-sidenav md-component-id=&quot;right&quot; md-is-locked-open=&quot;$mdMedia(&#39;min-width: 333px&#39;)&quot; class=&quot;md-sidenav-right&quot;&gt;
+    Right Nav!
+  &lt;/md-sidenav&gt;
+&lt;/div&gt;
+var app = angular.module(&#39;myApp&#39;, [&#39;ngMaterial&#39;]);
+app.controller(&#39;MyController&#39;, function($scope, $mdSidenav) {
+  $scope.openLeftMenu = function() {
+    $mdSidenav(&#39;left&#39;).toggle();
+  };
+});
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-sidenav being used in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui Elements -&gt; Material Ui&nbsp;</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">common/</strong><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">navigation</strong><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">.html</strong></p>
+<h4 id="material_angular_js_directives_md_slider">md-slider</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-slider&gt;&lt;/md-slider&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The&nbsp;component allows the user to choose from a range of values. As per the material design spec the slider is in the accent color by default.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The primary color palette may be used with the md-primary class. It has two modes: &#39;normal&#39; mode, where the user slides between a wide range of values, and &#39;discrete&#39; mode, where the user slides between only a few select values.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	To enable discrete mode, add the md-discrete attribute to a slider, and use the step attribute to change the distance between values the user is allowed to pick.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-slider ng-model=&quot;myValue&quot; min=&quot;5&quot; max=&quot;500&quot;&gt;
+&lt;/md-slider&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-slider being used in the menu item &nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Form elements -&gt; Form elements&nbsp;</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/forms/elements.html</strong></p>
+<h4 id="material_angular_js_directives_md_switch">md-switch</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-switch&gt;&lt;/md-switch&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	The switch is a style of checkbox usefull to simulate the mobile switch elements.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-switch ng-model=&quot;isActive&quot; aria-label=&quot;Finished?&quot;&gt;
+  Finished ?
+&lt;/md-switch&gt;
+&lt;md-switch md-no-ink ng-model=&quot;hasInk&quot; aria-label=&quot;No Ink Effects&quot;&gt;
+  No Ink Effects
+&lt;/md-switch&gt;
+&lt;md-switch ng-disabled=&quot;true&quot; ng-model=&quot;isDisabled&quot; aria-label=&quot;Disabled&quot;&gt;
+  Disabled
+&lt;/md-switch&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-switch being used in the menu item &nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Form elements -&gt; Form elements&nbsp;</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/forms/elements.html</strong></p>
+<h4 id="material_angular_js_directives_md_tab">md-tab</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-tab&gt;&lt;/md-tab&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Use the&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">md-tab</strong>&nbsp;a nested directive used within&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">md-tabs</strong>&nbsp;to specify a tab with a label and optional view content. If the label attribute is not specified, then an optional&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">md-tab-label</strong>&nbsp;tag can be used to specify more complex tab header markup.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	If neither the label nor the md-tab-label are specified, then the nested markup of the md-tab is used as the tab header markup. If a tab label has been identified, then any non-md-tab-label markup will be considered tab content and will be transcluded to the internal&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">div class=&quot;md-tabs-content&quot;</strong>&nbsp;container.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	This container is used by the TabsController to show/hide the active tab&#39;s content view. This synchronization is automatically managed by the internal TabsController whenever the tab selection changes.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Selection changes can be initiated via data binding changes, programmatic invocation, or user gestures.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-tab label disabled md-on-select md-on-deselect&gt;
+  &lt;h3&gt;My Tab content&lt;/h3&gt;
+&lt;/md-tab&gt;
+&lt;md-tab&gt;
+  &lt;md-tab-label&gt;
+    &lt;h3&gt;My Tab content&lt;/h3&gt;
+  &lt;/md-tab-label&gt;
+  &lt;p&gt;
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  &lt;/p&gt;
+&lt;/md-tab&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-tab being used in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui Elements -&gt; Material Ui</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/ui_elements/tabs.html</strong></p>
+<h4 id="material_angular_js_directives_md_toolbar">md-toolbar</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-toolbar&gt;&lt;/md-toolbar&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	md-toolbar is used to place a toolbar in your app. Toolbars are usually used above a content area to display the title of the current page, and show relevant action buttons for that page. You can change the height of the toolbar by adding either the&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">md-medium-tall&nbsp;</strong>or&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">md-tall</strong>&nbsp;class to the toolbar.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;div layout=&quot;column&quot; layout-fill&gt;
+  &lt;md-toolbar&gt;
+    &lt;div class=&quot;md-toolbar-tools&quot;&gt;
+      &lt;span&gt;My App&#39;s Title&lt;/span&gt;
+      &lt;!-- fill up the space between left and right area --&gt;
+      &lt;span flex&gt;&lt;/span&gt;
+      &lt;md-button&gt;
+        Right Bar Button
+      &lt;/md-button&gt;
+    &lt;/div&gt;
+  &lt;/md-toolbar&gt;
+  &lt;md-content&gt;
+    Hello!
+  &lt;/md-content&gt;
+&lt;/div&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-toolbar being used in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui Elements -&gt; Material Ui</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/ui_elements/&nbsp;</strong>in every of the templates in this folder.</p>
+<h4 id="material_angular_js_directives_md_tooltip">md-tooltip</h4>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-tooltip&gt;&lt;/md-tooltip&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	Tooltips are used to describe elements that are interactive and primarily graphical (not textual). Place a&nbsp;as a child of the element it describes. A tooltip will activate when the user focuses, hovers over, or touches the parent.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Usage :&nbsp;</strong></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;md-icon icon=&quot;/img/icons/ic_play_arrow_24px.svg&quot;&gt;
+  &lt;md-tooltip&gt;
+    Play Music
+  &lt;/md-tooltip&gt;
+&lt;/md-icon&gt;
+</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<button style="font-family: proxima-nova, sans-serif; font-size: 15px; color: rgb(85, 85, 85); -webkit-appearance: none;"></button></p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	You can find examples of md-tooltip being used in the menu item&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Ui Elements -&gt; Material Ui</strong>and you can find the code inside&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">views/ui_elements/tooltip.html</strong></p>
+</section>
+<section id="charts">
+	<div class="page-header"><h3>Charts</h3><hr class="notop"></div>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The application includes different libraries to handle the charting and graphs. here will be explained each one and how they are built, how they can be changed or adapted.&nbsp;All controllers and components for these charts are contained in the&nbsp;folder&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">components/charts</strong>. Also in each of these components you can see how the data is being fetched from the Data folder using services.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<h4 id="charts_d3_charts">D3 Charts</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	D3 Charts can be used to create rich charts with really great layouts. The theme uses N3 a AngularJs library for making d3 charts with AngularJs&nbsp;(<a href="https://github.com/n3-charts" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://github.com/n3-charts</a>)</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	This app only uses line charts and Pie charts of D3.</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;linechart data=&quot;lineChart.data.rawData&quot; options=&quot;lineChart.options&quot;&gt;&lt;/linechart&gt;
+</pre>
+<h4 id="charts__nbsp">&nbsp;</h4>
+<h4 id="charts_morris_charts">Morris charts</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Morris charts (<a href="http://morrisjs.github.io/morris.js/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://morrisjs.github.io/morris.js/</a>) is an excelent library for dynamic interactive charts. It contains different charts like :&nbsp;</p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Line charts</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Area charts</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		bar charts</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Stacked bar charts</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Doughnut bar charts</li>
+</ul>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	A special directive and controller was created for morris charts, it makes it very simple to include a chart in a view, provide the data from the controller and make it &nbsp;rendered using a custom directive. The following sample displays a line morris chart :</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+ &lt;div morris-chart data-data=&quot;simpleData&quot; data-type=&quot;line&quot; data-xkey=&quot;year&quot; data-ykeys=&#39;[&quot;value&quot;]&#39; data labels=&#39;[&quot;Value&quot;]&#39; data-line-colors=&#39;[&quot;#2693E9&quot;]&#39; data-line-width=&quot;3&quot;&gt;&lt;/div&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	There are like mentioned different types of charts specified here in the&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">data-type&nbsp;</strong>attribute :&nbsp;</p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		line</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		area</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		bar</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		donut</li>
+</ul>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	You can find information on the morris charts data in the controller&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">morrisChartCtrl</strong></p>
+<h4 id="charts_chart_js">Chart js</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Chartjs (<a href="http://www.chartjs.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://www.chartjs.org/</a>) is a simple yet effective charting library, easy to use and &nbsp;get started it provides different types of charts based on canvas. It does not provide interaction with the charts but provides a simple and clean way of representing easy data in several types of charts</p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Line</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Bar</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Radar</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Polar</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Pie</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Donut</li>
+</ul>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	A special directive and controller was created for chartjs, it makes it very simple to include a chart in a view, provide the data from the controller and make it &nbsp;rendered using a custom directive. The following sample displays a line&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">chartjs</strong>&nbsp;chart :&nbsp;</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;chart class=&quot;chartjs&quot; data-data=&quot;chartjsBar&quot; data-type=&quot;Bar&quot; value=&quot;myChart&quot;&gt;&lt;/chart&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the example data is comming from the controller&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">chartjsCtrl</strong>&nbsp;in the scope variable&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">chartjsBar</strong></p>
+<h4 id="charts_flot_charts">Flot charts</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Flotcharts (<a href="http://www.flotcharts.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://www.flotcharts.org/</a>) is a very complete charting library. it provides simple interactions with the chartings, and very different options and customizations to the charts. There are different types of flotcharts :&nbsp;</p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Line</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Realtime</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Line and area</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Stacked bar</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Pie&nbsp;</li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Doughnut</li>
+</ul>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the theme a directive and a controller was created for the flotcharts. The following example represents a chart where data is comming from &nbsp;the flotchart controller and displayed in the flotchart custom directive :&nbsp;</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+ &lt;div data-flot-chart data-data=&quot;line1.data&quot; data-options=&quot;line1.options&quot; style=&quot;width: 100%; height: 300px;&quot;&gt;&lt;/div&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the example data is comming from the controller&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">flotChartCtrl</strong>&nbsp;in the scope variable<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">&nbsp;line1.data</strong></p>
+<h4 id="charts_easypiecharts">Easypiecharts</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Easypiecharts (<a href="https://github.com/rendro/easy-pie-chart/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://github.com/rendro/easy-pie-chart/</a>) provides a way &quot;to draw simple, animated pie charts for single values&quot;. It is a simple representation of simple data in a very attractive way and easy to build.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the theme there is a custom directive and a controller to build easypiecharts like in the following example :</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;div easypiechart options=&quot;easypie1.options&quot; percent=&quot;easypie1.percent&quot; class=&quot;easypiechart&quot;&gt;
+      &lt;span class=&quot;pie-percent&quot; ng-bind=&quot;easypie1.percent&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the example data is comming from the controller&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">chartingCtrl</strong>&nbsp;in the scope variable<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">&nbsp;easypie1.&nbsp;</strong>It also contains a number in the middle wich will be the value represented in the center of the chart.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<h4 id="charts_gauge_charts">Gauge charts</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Gauge charts are a type of chart that can represent a percentage as a means of how much is reached. In the theme a custom directive and a controller are included to represent gauge charts.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the next example we can see how to build a gauge chart with the custom directive :&nbsp;</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;canvas data-gauge-chart data-gauge-data=&quot;gauge1.gaugeData&quot; data-gauge-options=&quot;gauge1.gaugeOptions&quot; style=&quot;width: 220px; height: 110px; &quot;&gt;&lt;/canvas&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the example data is comming from the controller&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">gaugeCtrl</strong>&nbsp;in the scope variable<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">&nbsp;gauge1.</strong></p>
+<h4 id="charts_sparkline">Sparkline</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Sparkline is a library for making small inline charts with data provided in the HTML element or via javascript. It has different types of charts and represents them a small sized elements that can be usefull to several widgets.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The following example shows how to build a sparkline chart :&nbsp;</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;span data-sparkline data-spark-data=&quot;simpleChart1.sparkData&quot; data-spark-options=&quot;simpleChart1.sparkOptions&quot;&gt;&lt;/span&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	In the example data is comming from the controller&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">sparklineCtrl</strong>&nbsp;in the scope variable<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">&nbsp;simpleChart1.</strong></p>
+</section>
+<section id="css_files">
+	<div class="page-header"><h3>CSS Files</h3><hr class="notop"></div>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">In the theme there are several SCSS files inside the &quot;styles&quot; folder. These files are organized as mention in the first chapter in the following folders :</em></p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Partials</strong>&nbsp;- The partials are mixins that are used across the application like @include box-shadow</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Base</strong>&nbsp;- The base CSS files styling general elements like forms, buttons, cards, labels, lists etc</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Settings</strong>&nbsp;- Cotains the settings for the application. Working like a configuration for the application CSS. Contains the colors of the theme in the file colors.scss</em></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">Components</strong>&nbsp;- Application specific components like Charts, maps, team members styling etc</em></li>
+</ul>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">All these files are compiled into the styles.scss file inside the styles folder and copied with grunt into the dist folder (minimized application).</em></p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">If you would like to edit a specific section of the site, simply find the appropriate CSS file as explained in the file styes.scss and then scroll down until you find the appropriate style that needs to be edited. For example for changing the default button style :&nbsp;</em></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;i&gt;/* Contains all buttons styling, including Angular Material design buttons md-button */
+@import &quot;base/buttons&quot;;
+...&lt;/i&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">For more information on bootstrap see&nbsp;<a href="http://getbootstrap.com/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://getbootstrap.com/</a>&nbsp;and&nbsp;<a href="https://material.angularjs.org/#/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://material.angularjs.org/#/</a></em></p>
+</section>
+<section id="theming_colors_nav">
+	<div class="page-header"><h3>Theming - colors & nav</h3><hr class="notop"></div>
+<h3>
+	&nbsp;</h3>
+<div>
+	<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+		Changing the theme color structure</h3>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		The theme uses material design color specs for theming. and this is quite flexible and easy to create your own color scheme. How it works is you create a pallete choosing from two colors, a&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">primary color</strong>&nbsp;and a&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">accent color&nbsp;</strong>(secondary).</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		There are a lot of base palletes to choose from :&nbsp;</p>
+	<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			red</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			pink</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			purple</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			deep-purple</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			indigo</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			blue</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			light-blue</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			cyan</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			teal</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			green</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			light-green</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			lime</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			yellow</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			amber</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			orange</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			deep-orange</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			brown</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			grey</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			blue-grey</li>
+	</ul>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		You then choose two of these and choose also a color (hue or shade) within that pallete.</p>
+	<h4 id="theming_colors_nav_configuring_a_theme_">Configuring a theme :</h4>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		The following sintax is used to create the theme sepcification :&nbsp;</p>
+	<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+$mdThemingProvider.theme(&#39;default&#39;)
+  .primaryPalette(config.md_primary.base, {
+    &#39;default&#39;: config.md_primary.shade
+  })
+  .accentPalette(config.md_accent.base, {
+    &#39;default&#39;: config.md_accent.shade
+  });</pre>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		As you can see the theme base color and shade are comming form the config.js file inside the app folder. You shoud do it this way as it makes it easier to propagate changes through the app as well as keeping settings like colors in a specific config file which is a good practice.</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		Lets take a look at the theme confi.js file :</p>
+	<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+angular.module(&quot;app.config&quot;,[]).constant(&#39;config&#39;,{
+    chart_lines:&#39;#f5f5f5&#39;,
+    danger_color:&#39;#C62828&#39;,
+    color_warning:&#39;#F2B53F&#39;,
+    md_primary: {
+        base: &#39;indigo&#39;,
+        shade: &#39;A200&#39;
+    },
+    md_accent: {
+        base: &#39;blue-grey&#39;,
+        shade: &#39;500&#39;
+    },</pre>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		We specify the main color as being&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">indigo</strong>&nbsp;with a shade of&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">A200</strong>&nbsp;and the accent color as being&nbsp;<strong class="redactor-inline-converted" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">blue-grey</strong>&nbsp;with a shade of 500.</p>
+	<h3 style="box-sizing: border-box; margin: 0px 0px 12px; padding: 0px; border: 0px; outline: 0px; font-size: 18px; vertical-align: baseline; line-height: 1.6; font-family: Arial, 'Helvetica Neue', Helvetica, Tahoma, sans-serif; color: rgb(0, 0, 0); text-rendering: optimizeLegibility; background: transparent;">
+		Navigation style</h3>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		The theme includes 2 different styles for navigation. You can choose by applying the following classes in the body element (&quot;&quot;)</p>
+	<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			navigation--small</li>
+		<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+			navigation--medium</li>
+	</ul>
+</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="icons">
+	<div class="page-header"><h3>Icons</h3><hr class="notop"></div>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The theme includes different libraries for displaying icons. You can find these libraries inside &nbsp;the &quot;fonts&quot; folder in the themes root folder.</p>
+<h4 id="icons_material_design_icon_set">Material design icon set</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	Material design icons included with the Material design framework by google. Find more in&nbsp;<a href="https://github.com/google/material-design-icons" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://github.com/google/material-design-icons</a></p>
+<h4 id="icons_glyphicons">Glyphicons</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The theme includes the glyphicons from bootstrap css for Icon. You can include icons anywhere on the template choosing from the different icons of bootstrap.</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+&lt;span class=&quot;glyphicon glyphicon-asterisk&quot;&gt;&lt;/span&gt;</pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	You can find all the icons in&nbsp;<a href="http://getbootstrap.com/components/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://getbootstrap.com/components/</a></p>
+<h4 id="icons_weather_icons">Weather icons</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	For displaying weather icons the API from&nbsp;<a href="http://erikflowers.github.io/weather-icons/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://erikflowers.github.io/weather-icons/</a>&nbsp;is used. It is a simple easy to use icon font generator that simillar to font awesome displays icons based on a&nbsp;<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">tag.</em></p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	&nbsp;</p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; line-height: 24px; background: transparent;">&lt;i class=&quot;wi-day-cloudy-gusts&quot;&gt;&lt;/i&gt;</em></pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; line-height: 24px; background: transparent;">You can find all the icons in&nbsp;<a href="http://erikflowers.github.io/weather-icons/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://erikflowers.github.io/weather-icons/</a></em></p>
+<h4 id="icons_em_style"box_sizing_border_box_margin_0px_padding_0px_border_0px_outline_0px_font_size_15px_vertical_align_baseline_color_rgb_85,_85,_85_font_family_proxima_nova,_sans_serif_line_height_24px_background_transparent"font_awesome_em"><em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; line-height: 24px; background: transparent;">Font awesome</em></h4>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; line-height: 24px; background: transparent;">The theme includes the fontawesome library for Icon generation. You can include icons anywhere on the template choosing from the great API that is fontawesome. &nbsp;</em></p>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; line-height: 24px; background: transparent;">To include an icon on a page simply add the following class elements to a i tag code (eg: facebook icon) &nbsp; : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</em></p>
+<pre style="box-sizing: border-box; margin-top: 0px; margin-bottom: 17px; border-color: rgb(229, 229, 229); outline: 0px; vertical-align: baseline; line-height: 1.4; border-radius: 3px; overflow: scroll; word-wrap: normal; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color: rgba(0, 0, 0, 0.74902); padding: 15px !important; background: rgb(248, 248, 248);">
+<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; line-height: 24px; background: transparent;">&lt;i class=&quot;fa fa-facebook fa-2x&quot;&gt;&lt;/i&gt; </em></pre>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; line-height: 1.6; position: relative; background: transparent;">
+	<em style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; line-height: 24px; background: transparent;">For more information on the API see&nbsp;<a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://fortawesome.github.io/Font-Awesome/</a></em></p>
+</section>
+<section id="additional_angular_scripts">
+	<div class="page-header"><h3>Additional Angular scripts</h3><hr class="notop"></div>
+<h4 id="additional_angular_scripts__nbsp">&nbsp;</h4>
+<div>
+	<h4 id="additional_angular_scripts_app_todo">App todo</h4>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		A todo list is something simple, yet very usefull. The admin theme includes a todo list that is saved on the browser cookies. This makes for a simple solution that can handle your everyday todo&#39;s in a easy and fast way.its based on&nbsp;<a href="http://todomvc.com/examples/angularjs/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://todomvc.com/examples/angularjs/</a>&nbsp;so you can easily extend it and apply changes that are included there.</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+		You can find the todo in the views folder of the app under&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">&quot;components&quot; -&gt; tasks.&nbsp;</strong>The controller associated with this is the&nbsp;<strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">taskCtrl&nbsp;</strong>pesent in the file task.js</p>
+</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="credits">
+	<div class="page-header"><h3>Credits</h3><hr class="notop"></div>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The following scripts and frameworks where used in the development of this theme :&nbsp;</p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Material design AngularJs -&nbsp;<a href="https://material.angularjs.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://material.angularjs.org/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		AngularJs -&nbsp;<a href="https://angularjs.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://angularjs.org/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		UnderscoreJs -&nbsp;<a href="http://underscorejs.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://underscorejs.org/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		JQuery -&nbsp;<a href="http://jquery.com/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://jquery.com/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Fontawesome -&nbsp;<a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://fortawesome.github.io/Font-Awesome/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Jqvmap -&nbsp;<a href="http://jqvmap.com/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://jqvmap.com/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		ChartJs -&nbsp;<a href="http://www.chartjs.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://www.chartjs.org/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Morris charts -&nbsp;<a href="http://morrisjs.github.io/morris.js/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://morrisjs.github.io/morris.js/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Flot chart -&nbsp;<a href="http://www.flotcharts.org/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://www.flotcharts.org/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Jquery Sparklines -&nbsp;<a href="http://omnipotent.net/jquery.sparkline/#s-about" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://omnipotent.net/jquery.sparkline/#s-about</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Easypie -&nbsp;<a href="http://rendro.github.io/easy-pie-chart/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">http://rendro.github.io/easy-pie-chart/</a></li>
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		N3 -&nbsp;<a href="https://github.com/n3-charts" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://github.com/n3-charts</a></li>
+</ul>
+<p style="box-sizing: border-box; margin: 0px 0px 17px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; position: relative; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	The following sites where used to get images for the demo of the theme</p>
+<ul style="box-sizing: border-box; margin: 12px 0px 25px 35px; padding-right: 0px; padding-left: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; line-height: 24px; color: rgb(85, 85, 85); font-family: proxima-nova, sans-serif; background: transparent;">
+	<li style="box-sizing: border-box; margin: 0px 0px 5px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-align: left; background: transparent;">
+		Unsplash -&nbsp;<a href="https://unsplash.com/" rel="nofollow" style="box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; color: rgb(69, 161, 214); transition: all 0.1s ease-out; background: transparent;">https://unsplash.com/</a></li>
+</ul>
+</section>
+
+	</div>
+</body>
+</html>

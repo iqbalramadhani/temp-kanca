@@ -1,0 +1,218 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>OneStudio Documentation</title>
+	<meta name="author" content="Liviu Cerchez" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="assets-docs/bronto.css" media="all" />
+	<link rel="stylesheet" href="assets-docs/site.css" media="all" />
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="assets-docs/ie.css" type="text/css" media="screen" />
+		<script src="assets-demos/js//html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrapper-top" class="container">
+		<header class="row clearfix">
+			<hgroup class="grid_8">
+				<h1>OneStudio <strong>Template</strong></h1>
+			</hgroup>
+			<div id="version" class="grid_4 last">
+				<div class="wrapper">
+					<span>HTML5</span>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div id="wrapper-content" class="container">
+		<article id="intro" class="row clearfix">
+			<div class="grid_12">
+				<h2>Thank you for your purchase</h2>
+				<p>If you have any questions that are beyond the scope of this help file, please feel free to email via my user page <a href="http://themeforest.net/user/liviu_cerchez" class="button small">contact</a> form. Thanks so much!</p>
+			</div>
+		</article>
+		<article id="install" class="row clearfix">
+			<div class="grid_12">
+				<h2>Installation</h2>
+				<p>Copy the files and folders in the <strong>HTML</strong> folder to your web hosting location. This will get you started and you'll be able to modify the theme based on your project.</p>
+			</div>
+		</article>
+		<article id="markup" class="row clearfix">
+			<div class="grid_12">
+				<h2>Markup Structure</h2>
+				<p>This theme has a responsive layout with 12 columns. You can customize the content, sidebar, navbar to be as width as you want. The general inner page template structure is the same throughout the template. Here it is:</p>
+<pre>&lt;div class=&quot;container&quot;&gt;
+	&lt;header id=&quot;logo&quot; class=&quot;col grid2&quot;&gt;
+		&lt;h1 class=&quot;shadow&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;&lt;img src=&quot;images/logo.png&quot; alt=&quot;OneStudio&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
+		&lt;a href=&quot;#&quot; id=&quot;menu-switch&quot; class=&quot;button&quot;&gt;&lt;/a&gt;
+	&lt;/header&gt;
+	&lt;div class=&quot;col grid4&quot;&gt;
+		&lt;nav id=&quot;menu&quot; class=&quot;clearfix&quot;&gt;
+			&lt;ul&gt;
+				...
+			&lt;/ul&gt;
+		&lt;/nav&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;heading&quot; class=&quot;col grid4&quot;&gt;
+		&lt;a class=&quot;thumb&quot;&gt;
+			&lt;img src=&quot;heading.jpg&quot; alt=&quot;&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+	&lt;section id=&quot;content&quot; class=&quot;col grid4 push2&quot;&gt;
+		&lt;h2&gt;Page title&lt;/h2&gt;
+		...
+	&lt;/section&gt;
+	&lt;footer id=&quot;footer&quot; class=&quot;col grid4 push2&quot;&gt;
+		...
+	&lt;/footer&gt;
+&lt;/div&gt;</pre>
+				<p>You can change the logo image by placing/uploading an image file into the image directory and setting it in the &lt;h1&gt; element in the header section.</p>
+				<p>If you prefer a text version instead of a logo, please see the following code for the logo markup:</p>
+<pre>&lt;header id=&quot;logo&quot; class=&quot;col grid2 text-version&quot;&gt;
+	&lt;h1 class=&quot;shadow&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;OneStudio&lt;/a&gt;&lt;/h1&gt;
+	&lt;a href=&quot;#&quot; id=&quot;menu-switch&quot; class=&quot;button&quot;&gt;&lt;/a&gt;
+&lt;/header&gt;</pre>
+			</div>
+		</article>
+
+		<article id="seo" class="row clearfix">
+			<div class="grid_12">
+				<h2>SEO Settings</h2>
+				<p>The template contains &lt;head&gt; information that you would probably want to edit: title, description (SEO relevant), keywords (SEO relevant), favicon, apple touch icon and Facebook share image:</p>
+<pre>&lt;title&gt;Title goes here&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Description entered for SEO&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;list of keywords&quot; /&gt;
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.png&quot; /&gt;
+&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;images/touch-icon.png&quot; /&gt;
+&lt;link rel=&quot;image_src&quot; href=&quot;images/touch-icon.png&quot; /&gt;</pre>
+			</div>
+		</article>
+
+		<article id="css_styling" class="row clearfix">
+			<div class="grid_12">
+				<h2>CSS Styling</h2>
+				<p>I'm using only one highly optimized CSS file that uses mobile first approach. That means all the style is applied for mobile devices first and if the screen is bigger the template has more rich, bandwidth consuming features. The stylesheet contains a general reset CSS file so all browsers behave almost the same way. This stylesheet also contains some general styling, such as anchor tag colors, font-sizes, etc. Keep in mind, that these values might be overridden at any time.</p>
+				<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited. Almost every widget in the template can be customized easily this way. Make sure you check out the HTML markup first and then modify its style in the CSS file.</p>
+				<pre><strong>Note</strong>: to switch to the dark theme just include the <em>style-dark.css</em> file after <em>style.css</em> in the header of each page.</pre>
+			</div>
+		</article>
+
+		<article id="widgets" class="row clearfix">
+			<div class="grid_12">
+				<h2>Widgets</h2>
+				<p>This theme imports three mandatory Javascript files: jQuery, jquery.common.min.js and site.js. jQuery is a Javascript library that greatly reduces the amount of code that you must write. The template includes a rich set of plugins in order to enhace the user experience: window smartresize, easing effects, fancyBox 2, RefineSlide, nicescroll, etc (some of them are placed in a common script file and the rest of them have their own separate file). The site.js script is used to initialize all the plugins and add events to certain objects. Here is the place where you can modify some widget behaviour (each external/additional plugin is configured inline - in each page).</p>
+				<p>Here are the default setting of some plugins common to all pages:</p>
+<pre>jQuery("html").niceScroll({
+	cursoropacitymax   : 1,
+	cursorcolor        : '#428aa1',
+	cursorwidth        : '10px',
+	cursorborder       : '0',
+	cursorborderradius : '0',
+	cursorminheight    : 50,
+	hidecursordelay    : 400,
+	mousescrollstep    : 50,
+	grabcursorenabled  : false,
+	dblclickzoom       : false
+});
+
+jQuery('ul.rs-slider').refineSlide({
+	transition         : 'cubeH',
+	fallback3d         : 'slideH',
+	autoPlay           : true,
+	delay              : 5000,
+	transitionDuration : 800,
+});
+
+jQuery(".thumb .lightbox").fancybox({
+	padding    : 5,
+	margin     : [50, 20, 20, 20],
+	maxHeight  : '95%',
+	loop       : true,
+	fitToView  : true,
+	mouseWheel : false,
+	closeClick : false,
+	helpers    : {
+		media : { } ,
+		title : { type : 'outside'},
+		overlay : { showEarly  : true, locked : false }
+	},
+	beforeLoad : function() {
+		this.href = this.element.data('fancybox-href');
+		this.title = this.element.data('fancybox-title');
+	},
+});</pre>
+				<p>Make sure you check out thre documentation of each plugin for its complete set of options. Each page may include a different set of plugin at the end of the file (recommanded above the closing body tag) and initialized inline on the spot.</p>
+			</div>
+		</article>
+
+		<article id="tips" class="row clearfix">
+			<div class="grid_12">
+				<h2>Tips and Tricks</h2>
+				<p>Here are a couple of neat tricks used in this theme and how to use them:</p>
+				<ol>
+					<li>set active menu item: add a <strong>current_page_item</strong> class to the active menu element (add it to the &lt;li&gt; element);</li>
+					<li>create submenu: add a <strong>arrow</strong> class to the parent menu element (see markup for details);</li>
+					<li>add a tooltip to an element: add <strong>tooltip</strong> class to the element and specify a title attribute: &lt;a href="#" class="tooltip" title="Tooltip example"&gt;link&lt;/a&gt;</li>
+					<li>create a thumbnail with link, fullsize or video icons: wrap your image in a link with the <strong>thumb</strong> class and add extra information to it like this:
+<pre>&lt;a href=&quot;single.html&quot; class=&quot;thumb&quot;&gt;
+	&lt;img src=&quot;thumb.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;span class=&quot;mask&quot;&gt;
+		&lt;strong class=&quot;link half&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/strong&gt;
+		&lt;strong class=&quot;expand half lightbox&quot; data-fancybox-href=&quot;full-image&quot; data-fancybox-title=&quot;Title for lightbox&quot; data-fancybox-group=&quot;group-name&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/strong&gt;
+	&lt;/span&gt;
+&lt;/a&gt;</pre>
+					</li>
+					<li>make videos and embeds responsive: wrap the video or embed in the following markup structure:
+<pre>&lt;div class="video-container"&gt;
+    &lt;div class="video-wrapper"&gt;
+        &lt;iframe src="..."&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+					</li>
+					<li>there are multiple options when it comes to buttons: small, normal, big , default color, gray, black. It's easy to add a .button class to any element (anchors for example) ad set a color preference and size option. Here is a big gray button: &lt;a href="#" class="button big gray"&gt;Big Gray&lt;/a&gt;. Please see more details in the forms-buttons.html file;</li>
+					<li>alerts are a good way to capture attention: &lt;div class="alert">Information box&lt;/div&gt;. Please see the alerts-widgets.html file for different options;</li>
+					<li>accordions: add a accordion class to any &lt;ul&gt; list and it will be transformed automatically into an accordion widget; additionally you can specify which accordion box is opened initally with an active class on each list's &lt;li&gt;. Please see the alerts-widgets.html file for different options;</li>
+					<li>tab container: wrap the content in a <strong>tab-container</strong> element with a &lt;ul class"tabs"&gt; list followed by .tab_content elements; please see the alerts-widgets.html for the markup.</li>
+				</ol>
+			</div>
+		</article>
+
+		<article id="credits" class="row clearfix">
+			<div class="grid_12">
+				<h2>Credits</h2>
+				<ul>
+					<li><a href="http://960.gs/">960px grid</a></li>
+					<li><a href="http://jquery.com">jQuery</a></li>
+					<li><a href="https://github.com/aFarkas/html5shiv">HTML5 Shiv</a></li>
+					<li><a href="https://github.com/scottjehl/Respond">Respond.js</a></li>
+					<li><a href="https://github.com/louisremi/jquery-smartresize">Window smartresize</a></li>
+					<li><a href="http://unwrongest.com/projects/tabify">Tabify</a></li>
+					<li><a href="http://adam.co/lab/jquery/customselect/">jQuery.customSelect</a></li>
+					<li><a href="http://areaaperta.com/nicescroll">jQuery.nicescroll</a></li>
+					<li><a href="http://github.com/alexdunphy/refineslide">jQuery RefineSlide</a></li>
+					<li><a href="http://eikes.github.com/jquery.swipe-events.js">Swipe Events</a></li>
+					<li><a href="http://razorjack.net/quicksand">Quicksand</a></li>
+					<li><a href="http://fancyapps.com/fancybox">Fancybox</a></li>
+					<li><a href="http://malsup.com/jquery/form/">jQuery Form Plugin</a></li>
+					<li><a href="http://brontocss.liviuholhos.com/menu.html">My personal Bronto CSS Menu</a></li>
+					<li><a href="http://www.fontsquirrel.com/">Aller Font</a></li>
+					<li><a href="http://www.addthis.com/">Sharing widget</li>
+					<li><a href="http://photodune.net/">Some purchased PhotoDune images (not included)</a></li>
+					<li><a href="http://www.freepixels.com/">freepixels.com images (not included)</a></li>
+				</ul>
+			</div>
+		</article>
+
+		<article id="thankyou" class="row clearfix">
+			<div class="grid_12">
+				<h2>Final thought</h2>
+				<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this plugin. No guarantees, but I'll do my best to assist.</p>
+			</div>
+		</article>
+
+	</div>
+</body>
+</html>
